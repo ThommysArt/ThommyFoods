@@ -160,10 +160,10 @@ export default function Home() {
           </section>
 
           {/*Items*/}
-          <section className="items-section relative w-full mt-8 overflow-x-hidden">
+          <section className="items-section relative w-full mt-8">
             <div className="absolute inset-0 w-full">
               <div className="sticky top-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none">
-                <h2 className="text-[6rem] md:text-[8rem] lg:text-[10rem] w-[40vw] font-cinzel-decorative text-center font-bold text-[#322922]/90">
+                <h2 className="text-[6rem] md:text-[8rem] lg:text-[10rem] w-[40vw] font-cinzel-decorative font-bold text-[#322922]/90">
                   Eating Good
                 </h2>
               </div>
@@ -173,22 +173,12 @@ export default function Home() {
                 <div className="items-row flex flex-row gap-8" key={i}>
                   <div className="item-left w-full h-full relative">
                     <AspectRatio ratio={1}>
-                      <Image
-                        src={row[0].imageUrl || "/placeholder.svg"}
-                        alt={row[0].name}
-                        fill
-                        className={`object-cover rounded-xl w-full h-full`}
-                      />
+                      <Image src={row[0].imageUrl} alt={row[0].name} fill className={`object-cover rounded-xl w-full h-full`} />
                     </AspectRatio>
                   </div>
                   <div className="item-right w-full h-full relative">
                     <AspectRatio ratio={1}>
-                      <Image
-                        src={row[1].imageUrl || "/placeholder.svg"}
-                        alt={row[1].name}
-                        fill
-                        className={`object-cover rounded-xl w-full h-full`}
-                      />
+                      <Image src={row[1].imageUrl} alt={row[1].name} fill className={`object-cover rounded-xl w-full h-full`} />
                     </AspectRatio>
                   </div>
                 </div>

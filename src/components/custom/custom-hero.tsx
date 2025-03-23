@@ -27,7 +27,7 @@ const CustomHero: React.FC<CustomHeroProps> = ({ images }) => {
   }, [currentIndex, nextIndex])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}

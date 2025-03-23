@@ -39,7 +39,7 @@ export default function CustomHero() {
     setProgress(0)
 
     // Create progress animation
-    const duration = 5 // seconds
+    const duration = 3 // seconds
     const steps = 100
     const increment = 100 / steps
     const stepTime = (duration * 1000) / steps

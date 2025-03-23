@@ -7,6 +7,18 @@ export const heroImages = [
     {
       url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEvLw8RoTeAr4DZuxLOMjUk5dqmNi27w0yfF6Y",
       alt: "Hero 2",
+    },
+    {
+        url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEf7Jxw3ZnmBRKCDT1rJylLnES3cY8NHiqU9Pk",
+        alt: "Hero 3",
+    },
+    {
+        url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCE0L0jGrPMqmcAfFIDVJjyn2rBispgkbY9GRHE",
+        alt: "Hero 4",
+    },
+    {
+        url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEBC40gr9YRytbowv4VslWPFnmkGp8DdYiHzAg",
+        alt: "Hero 5",
     }
   ]
 

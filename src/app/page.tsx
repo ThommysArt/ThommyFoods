@@ -21,8 +21,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Footer from "@/components/footer"
-import { Heros, Rows, dishes } from "@/lib/data"
+import { Rows, dishes } from "@/lib/data"
 import LoadingScreen from "@/components/custom/loading-screen"
+import CustomHero from "@/components/custom/custom-hero"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -147,23 +148,13 @@ export default function Home() {
           </nav>
 
           {/*Hero*/}
-          <section className="relative w-full h-screen">
-            <Image
-              src={"https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEy7H3H42QRgH5wNhcPZ4EYJbIrA037SUlTi6n"}
-              alt="hero"
-              fill
-              className="w-full h-full object-cover rounded filter brightness-70"
-            />
-            <h1 className="text-7xl md:text-7xl lg:text-9xl absolute bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-cinzel-decorative font-light bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
-              Fast Food Restaurant
-            </h1>
-          </section>
+          <CustomHero />
 
           {/*Items*/}
           <section className="items-section relative w-full mt-8">
             <div className="absolute inset-0 w-full">
               <div className="sticky top-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none">
-                <h2 className="text-[6rem] md:text-[8rem] lg:text-[10rem] w-[40vw] font-cinzel-decorative font-bold text-[#322922]/90">
+                <h2 className="text-[6rem] md:text-[8rem] lg:text-[10rem] w-[40vw] font-cinzel-decorative font-bold text-center text-[#322922]/90">
                   Eating Good
                 </h2>
               </div>

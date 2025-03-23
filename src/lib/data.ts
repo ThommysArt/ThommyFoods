@@ -1,8 +1,14 @@
 
-export const Heros = [
-    "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEy7H3H42QRgH5wNhcPZ4EYJbIrA037SUlTi6n",
-    "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEvLw8RoTeAr4DZuxLOMjUk5dqmNi27w0yfF6Y"
-]
+export const heroImages = [
+    {
+      url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEy7H3H42QRgH5wNhcPZ4EYJbIrA037SUlTi6n",
+      alt: "Hero 1",
+    },
+    {
+      url: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEvLw8RoTeAr4DZuxLOMjUk5dqmNi27w0yfF6Y",
+      alt: "Hero 2",
+    }
+  ]
 
 const row1 = [
     { name: "Item 1", imageUrl: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCENwDX8LH69GHmF2zsfTX3YEcngVbBvOwqkLCt" },

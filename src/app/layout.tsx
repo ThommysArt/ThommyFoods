@@ -39,11 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${charmSerif.variable} ${cinzelDecorative.variable} antialiased selection:bg-amber-200/50 selection:text-amber-800 bg-amber-100`}
+        className={`${geistSans.variable} ${geistMono.variable} ${charmSerif.variable} ${cinzelDecorative.variable} antialiased selection:bg-amber-200/50 selection:text-amber-800 bg-amber-100 text-white`}
       >
         <ThemeProvider
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="dark"
             disableTransitionOnChange
           >
             {children}

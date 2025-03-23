@@ -140,7 +140,7 @@ export default function Home() {
                 >
                   Menu
                 </Button>
-                <Button size="lg" className="rounded-full" onClick={() => scrollToSection("footer")}>
+                <Button size="lg" className="rounded-full bg-amber-200 border" onClick={() => scrollToSection("footer")}>
                   Contact
                 </Button>
               </div>
@@ -159,21 +159,23 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-            <div className="flex flex-col gap-8 mx-auto justify-evenly w-[80vw] min-h-[200vh] relative z-20">
-              {Rows.map((row, i) => (
-                <div className="items-row flex flex-row gap-8" key={i}>
-                  <div className="item-left w-full h-full relative">
-                    <AspectRatio ratio={1}>
-                      <Image src={row[0].imageUrl} alt={row[0].name} fill className={`object-cover rounded-xl w-full h-full`} />
-                    </AspectRatio>
+            <div className="w-full h-fit overflow-x-hidden">
+              <div className="flex flex-col gap-8 mx-auto justify-evenly w-[80vw] min-h-[200vh] relative z-20">
+                {Rows.map((row, i) => (
+                  <div className="items-row flex flex-row gap-8" key={i}>
+                    <div className="item-left w-full h-full relative">
+                      <AspectRatio ratio={1}>
+                        <Image src={row[0].imageUrl} alt={row[0].name} fill className={`object-cover rounded-xl w-full h-full`} />
+                      </AspectRatio>
+                    </div>
+                    <div className="item-right w-full h-full relative">
+                      <AspectRatio ratio={1}>
+                        <Image src={row[1].imageUrl} alt={row[1].name} fill className={`object-cover rounded-xl w-full h-full`} />
+                      </AspectRatio>
+                    </div>
                   </div>
-                  <div className="item-right w-full h-full relative">
-                    <AspectRatio ratio={1}>
-                      <Image src={row[1].imageUrl} alt={row[1].name} fill className={`object-cover rounded-xl w-full h-full`} />
-                    </AspectRatio>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </section>
 

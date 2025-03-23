@@ -103,12 +103,12 @@ export default function CustomCursor() {
       {/* Main cursor with fork and knife icon */}
       <div ref={cursorRef} className="fixed top-0 left-0 z-50 pointer-events-none">
         <div className="relative w-10 h-10">
-          <UtensilsCrossed />
+          <UtensilsCrossed className="text-white" />
         </div>
       </div>
 
       {/* Small dot that follows cursor more closely */}
-      <div ref={cursorDotRef} className="fixed top-0 left-0 z-50 w-1 h-1 rounded-full bg-primary pointer-events-none" />
+      <div ref={cursorDotRef} className="fixed top-0 left-0 z-50 w-1 h-1 rounded-full bg-primary pointer-events-none fill-white text-white" />
     </>
   )
 }

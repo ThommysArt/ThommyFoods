@@ -21,7 +21,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Footer from "@/components/footer"
-import { Rows, dishes } from "@/lib/data"
+import { Heros, Rows, dishes } from "@/lib/data"
 import LoadingScreen from "@/components/custom/loading-screen"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -39,21 +39,22 @@ export default function Home() {
     ScrollTrigger.refresh()
   }
 
+  // Auto-scroll carousel
   React.useEffect(() => {
-    if (!api) {
-      return
-    }
+    if (!api || isLoading) return
 
-    setTimeout(() => {
-      if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
+    const interval = setInterval(() => {
+      if (api.selectedScrollSnap() + 1 >= api.scrollSnapList().length) {
         setCurrent(0)
         api.scrollTo(0)
       } else {
         api.scrollNext()
-        setCurrent(current + 1)
+        setCurrent((prev) => prev + 1)
       }
     }, 1000)
-  }, [api, current])
+
+    return () => clearInterval(interval)
+  }, [api, isLoading])
 
   const isMobile = useIsMobile()
 
@@ -159,7 +160,7 @@ export default function Home() {
           </section>
 
           {/*Items*/}
-          <section className="items-section relative w-full mt-8">
+          <section className="items-section relative w-full mt-8 overflow-x-hidden">
             <div className="absolute inset-0 w-full">
               <div className="sticky top-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none">
                 <h2 className="text-[6rem] md:text-[8rem] lg:text-[10rem] w-[40vw] font-cinzel-decorative text-center font-bold text-[#322922]/90">
@@ -198,7 +199,7 @@ export default function Home() {
           {/* Menu */}
           <section
             id="menu"
-            className="menu-section min-h-screen w-full mt-10 space-y-8 lg:space-y-16 bg-[#322922] py-[10rem]"
+            className="menu-section min-h-screen w-full mt-10 space-y-8 lg:space-y-16 bg-[#322922] py-[10rem] overflow-x-hidden"
           >
             <h1 className="text-6xl md:text-7xl lg:text-9xl font-cinzel-decorative font-light underline text-center text-amber-100">
               Menu
@@ -217,15 +218,15 @@ export default function Home() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute -bottom-10 right-10" />
-                <CarouselNext className="absolute -bottom-10 right-6" />
+                {/* <CarouselPrevious className="absolute -bottom-10 right-10" />
+                <CarouselNext className="absolute -bottom-10 right-6" /> */}
               </Carousel>
               <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#322922]"></div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#322922]"></div>
             </div>
           </section>
 
-          <footer id="footer" className="bg-[#322922] py-[10rem]">
+          <footer id="footer" className="bg-[#322922] py-[10rem] overflow-x-hidden">
             <Footer />
           </footer>
         </div>

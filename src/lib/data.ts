@@ -1,3 +1,9 @@
+
+export const Heros = [
+    "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEy7H3H42QRgH5wNhcPZ4EYJbIrA037SUlTi6n",
+    "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCEvLw8RoTeAr4DZuxLOMjUk5dqmNi27w0yfF6Y"
+]
+
 const row1 = [
     { name: "Item 1", imageUrl: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCENwDX8LH69GHmF2zsfTX3YEcngVbBvOwqkLCt" },
     { name: "Item 2", imageUrl: "https://l3t21trefy.ufs.sh/f/UjDQWowP9GCERE4EsF1mF1NVOXxnYL3Dq8haIvPdT29QZbUj" },

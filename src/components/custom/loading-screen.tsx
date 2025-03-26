@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import gsap from "gsap"
-import { Rows, dishes } from "@/lib/data"
+import { Rows, dishes, heroImages } from "@/lib/data"
 
 interface LoadingScreenProps {
   onLoadingComplete: () => void
@@ -18,8 +18,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
   useEffect(() => {
     // Collect all image URLs that need to be preloaded
     const imagesToLoad = [
-      "/assets/hero1.jpg",
-      "/assets/item3.jpg", // Avatar image
+      ...heroImages.map((image) => image.url),
       ...Rows.flatMap((row) => row.map((item) => item.imageUrl)),
       ...dishes.map((dish) => dish.imageUrl),
     ]
